@@ -1,0 +1,52 @@
+.user-nav {
+	//background-color: greenyellow;
+
+	align-self: stretch;//this overides the align center in the header which originally centered the elemenet vertically to now COVERING(FILLING) its position fully
+	display: flex;//flex value of display by default align items horizontally and centered inside the parent element
+	align-items: center;//aligns both vertically and horizontally
+
+	& > * {//selector > (selects the parent direct children elements) & wildcat * selects all children
+		padding: 0 2rem;
+		cursor: pointer;
+		height: 100%; //making the entire icons have full 100% height
+		display: flex;
+		align-items: center;
+	}
+
+	& > *:hover {//when any of all the the children are hovered
+		background-color: var(--color-grey-light-2);
+	}
+
+	&__icon-box {
+		position: relative;
+	}
+
+	&__icon {
+		height: 2.25rem;//this is the simplest way of defining svg size by these 2 properties
+		width: 2.25rem;
+		fill: var(--color-grey-dark-2);
+		
+	}
+
+	&__notification {
+		font-size: .8rem;
+		height: 1.75rem;
+		width: 1.75rem;
+		border-radius: 50%;
+		background-color: var(--color-primary);
+		color: #fff;
+		position: absolute;
+		top: 1.5rem;
+		right: 1.1rem;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__user-photo {
+		height: 3.75rem;
+		border-radius: 50%;
+		margin-right: 1rem;
+	}
+}
